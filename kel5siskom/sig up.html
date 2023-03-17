@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="wreaper">
+        <div class="title-text">
+            <div class="title-login">From Login</div>
+        </div>
+        <div class="title-text">
+            <div class="title-login">From Login</div>
+            <div class="title-signup">From Registrasi</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup" checked>
+                <label for="login" class="slide-login">Login</label>
+                <label for="signup" class="slide-signup">Registrasi</label>
+                <div class="slider-tab"></div>
+                <div class="form-inner">
+                    <form action="#" class="login">
+                        <div class="field">
+                            <input type="text" placeholder="Masukan Email">
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Masukan password">
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">Lupa password</a>
+                        </div>
+                        <div class="field-btn">
+                            <div class="btn-layer">
+                                <input type="submit" value="login">
+                            </div>
+                            <div class="signup-link">Belum punya akun? <a href="#">Daftarkan sekarang</a></div>
+                        </div>
+                    </form>
+                    <form action="#" class="" signup>
+                        <div class="feald">
+                            <input type="text" placeholder="Masukan Email" required>
+                        </div>
+                        <div class="feald">
+                            <input type="text" placeholder="Masukan Password" required>
+                        </div>
+                        <div class="feald">
+                            <input type="text" placeholder="Konfirmasi Password" required>
+                        </div>
+                        <div class="field-btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="signup">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    
+    </style>
+
+    <script>
+        const logintext = document.querySelector(".title-text .login");
+        const loginfrom = document.querySelector(".from .login");
+        const loginbtn = document.querySelector(".label .login");
+        const signupbtn = document.querySelector(".label .signup");
+        const signlink = document.querySelector(".from .signup-link");
+        signupbtn.onclick = (() => {
+            loginfrom.style.marginleft = "-50%";
+            logintext.style.marginleft = "-50%";
+        });
+        signupbtn.onclick = (() => {
+            loginfrom.style.marginleft = "0%";
+            logintext.style.marginleft = "0%";
+        });
+        signupbtn.onclick = (() => {
+            signupbtn.onclick();
+            return false;
+        });
+
+    </script>
+</body>
+
+</html>
